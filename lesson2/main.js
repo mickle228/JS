@@ -175,5 +175,5 @@ if (coursesAndDurationArray[4].monthDuration > 5) {
     console.log('Супер');
 }
 if (coursesAndDurationArray[5].monthDuration > 5) {
-    console.log('Супер');
+    console.log('Суперр');
 }
