@@ -143,13 +143,16 @@ if (firstNumber > secondNumber) {
 }
 //     - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
 //         за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
-    let xx = prompt('може прийняти будь-яке значення');
-    if (xx || '') {
+//     let xx = 0;
+let xx = xx || 'default;'
+    console.log(typeof xx)
+    if (xx || 0) {
         console.log('true');
     } else {
         xx = 'default'
         console.log(xx);
     }
+
 //     - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
 let coursesAndDurationArray = [
     {title: 'JavaScript Complex', monthDuration: 5},
