@@ -44,25 +44,25 @@ function createUlWith3Li (item) {
 createUlWith3Li(3);
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 function createUlWithManyLi (item, quantity) {
+    document.write('<ul>');
     for (let i = 0; i < quantity; i++) {
-        document.write('<ul>');
         document.write('<li>');
         document.write(item);
         document.write('</li>');
-        document.write('</ul>');
     }
+    document.write('</ul>');
 }
 createUlWithManyLi('as', 5);
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 let arrr = [1, 2, true, 'lorem'];
 function createUlFromArr (array, quantity) {
+    document.write('<ul>');
     for (const arrayElement of array) {
-        document.write('<ul>');
         document.write('<li>');
         document.write(arrayElement);
         document.write('</li>');
-        document.write('</ul>');
     }
+    document.write('</ul>');
 }
 createUlFromArr(arrr, 5);
 
@@ -86,7 +86,7 @@ createUlFromArrObj(users);
 // - створити функцію яка повертає найменьше число з масиву
 let numbs = [2, 3, 5];
 function minNumber (array) {
-    let result = 5;
+    let result = numbs[0];
     for (const arrayElement of array) {
         if (arrayElement < result) {
             result = arrayElement
