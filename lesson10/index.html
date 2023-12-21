@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+    .num {
+        font-size: 100px;
+    }
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+    .box {
+        min-width: 100px;
+        margin-right: 20px;
+    }
+    </style>
+</head>
+<body>
+<form id='#f1'>
+    <input type="text" placeholder="name" name="name" required>
+    <input type="text" placeholder="surname" name="surname" required>
+    <input type="number" placeholder="age" name="age" required>
+    <button id="btn-show-all">show users</button>
+</form>
+<form id='#age'>
+    <input type="number" placeholder="ageUser" name="ageUser" required>
+    <button id="accept">show users</button>
+</form>
+<label for="rowsInput">Кількість рядків:</label>
+<input type="number" id="rowsInput">
+<label for="colsInput">Кількість ячеєк:</label>
+<input type="number" id="colsInput">
+<label for="contentInput">Вміст ячеєк:</label>
+<input type="text" id="contentInput">
+<button onclick="createTable()">Створити табличку</button>
+<div id="tableContainer"></div>
+<script src="main.js"></script>
+</body>
+</html>
+
