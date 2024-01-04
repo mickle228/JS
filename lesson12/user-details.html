@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    let url = new URL(location.href);
+    let id = url.searchParams.get('id');
+    fetch('https://jsonplaceholder.typicode.com/users/' + `${id}`)
+        .then((response) => response.json())
+        .then((user) => {
+            div = document.createElement('div');
+            document.body.appendChild(div);
+            for (const userKey in user) {
+                if (typeof user[userKey] === 'object') {
+                    str = JSON.stringify(user[userKey]);
+                    obj = JSON.parse(str);
+                    for (const objKey in obj) {
+                        if (typeof obj[objKey] === 'object') {
+                            str1 = JSON.stringify(obj[objKey]);
+                            obj1 = JSON.parse(str1);
+                            for (const obj1Key in obj1) {
+                                p = document.createElement('p');
+                                p.innerText = `${obj1Key} - ${obj1[obj1Key]}`;
+                                div.appendChild(p);
+                            }
+                        } else {
+                            p = document.createElement('p');
+                            p.innerText = `${objKey} - ${obj[objKey]}`;
+                            div.appendChild(p);
+                        }
+                    }
+                } else {
+                    p = document.createElement('p');
+                    p.innerText = `${userKey} - ${user[userKey]}`;
+                    div.appendChild(p);
+                }
+            }
+        });
+</script>
+</body>
+</html>
+
